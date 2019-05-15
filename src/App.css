@@ -1,0 +1,126 @@
+.main-container{
+  margin-top: 30px;
+}
+.card{
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  animation: onLoad 0.7s ease-out;
+}
+.card .brand-name{
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+.card .product-name{
+  text-align: center;
+  font-size: 16px;
+
+  color: #848484;
+}
+.card:hover{
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.card img {
+  margin: 0 auto 20px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  width: 300px;
+}
+.card img:hover {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  width: 320px;
+}
+
+.selection-button{
+  margin: 10px;
+}
+.selection-button img{
+  width: 45px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.selection-button img:hover{
+  width: 50px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.selection-button img:hover {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.empty{
+  margin: 10px;
+  text-align: center;
+}
+.empty h1{
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+/*counter*/
+
+.counter{
+  font-size: 28px;
+  margin-bottom: 20px ;
+  background: white;
+  box-shadow: 0 5px 50px -12px rgba(0,0,0,.25);
+}
+.counter div{
+  margin: 10px;
+}
+.counter div:nth-child(1){
+  color: #00d4ae;
+}
+.counter div:nth-child(2){
+  color: #f2000c;
+}
+
+
+/*animation*/
+@keyframes onLoad   {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.01);
+    opacity: 1;
+  }
+}
+
+@keyframes yay   {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(20deg) scale(1.05) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-20deg) scale(0.5) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+#card-container.yes .card {
+  animation: yay 0.7s ease-out;
+}
+#card-container.nope .card {
+  animation: nope 0.7s ease-out;
+}
+
